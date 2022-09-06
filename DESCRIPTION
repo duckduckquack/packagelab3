@@ -1,12 +1,14 @@
 Package: packagelab3
-Title: What the Package Does (One Line, Title Case)
+Title: Euclidean and Dijkstra algorithms
 Version: 0.0.0.9000
 Authors@R: 
     person("First", "Last", , "first.last@example.com", role = c("aut", "cre"),
            comment = c(ORCID = "YOUR-ORCID-ID"))
-Description: What the package does (one paragraph).
-License: `use_mit_license()`, `use_gpl3_license()` or friends to pick a
-    license
+Description: The package contains two functions, euclidean and dijkstra. 
+   euclidean computes the GCD between the two arguments using the euclidean
+   algorithm. dijkstra computes the shortes paths between the initial node
+   and all the other nodes in the given graph using the Dijkstra algorithm.
+License: MIT + file LICENSE
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.2.1
