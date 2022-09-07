@@ -23,6 +23,21 @@
 #' dijkstra(wiki_graph, 1)
 #' dijkstra(wiki_graph, 3)
 dijkstra <- function(graph, init_node) {
+  if(!(is.numeric(init_node) & length(init_node) == 1)){
+    stop("Input init_node must be a numeric scalar")
+  }
+
+  if(!(init_node %in% graph$v1)){
+    stop("Input ini_node is not part of graph")
+  }
+
+  if(!(is.data.frame(graph))){
+    stop("Input graph must be a data frame")
+  }
+
+  if(!("v1" %in% names(graph) & "v2" %in% names(graph) & "w" %in% names(graph))){
+    stop("Input graph has the wrong format")
+  }
 
   #vector of nodes
   nodes <- unique(graph$v1)
@@ -55,7 +70,7 @@ dijkstra <- function(graph, init_node) {
     m <- min(df$d[u])
     current <- df[u, ][df[u, ]$d == m, 1][1]
   }
-  df$d
+  as.numeric(df$d)
 }
 
 

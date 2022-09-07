@@ -22,8 +22,8 @@ This function uses the Euclidean algorithm to compute
 the GCD of the two arguments.
 }
 \examples{
-euclidean(45L, 10L)
-euclidean(10L, 5L)
+euclidean(45, 10)
+euclidean(10, 5)
 \dontrun{
 euclidean("b", "a")
 }
